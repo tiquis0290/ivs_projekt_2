@@ -9,6 +9,7 @@ GUI: tkinter
 Komunikační kanály: Discord + email + telefon
 odpovidat do 48h(deadline 6h)(případně omluvit dopředu)
 Repozitář: GitHub https://github.com/tiquis0290/ivs_projekt_2
+měl by být přdán účet ivskontrola
 
 Způsob komentování: Doxygen
 Jazyk komentářů: Angličtina
