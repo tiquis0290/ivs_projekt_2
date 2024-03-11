@@ -1,8 +1,65 @@
-Tento soubor bude obsahovat:
+Plán práce na kalkulačce
+------------------------
+tým: Jazyková bariéra😎
+členové: Marek Maslowski (xmaslom00), Adam Sloboda (xsloboa00), Richard Hyža (xhyzari00), Vít Janeček (xjanecv00)
 
--- stanovené termíny,
--- přidělení úkolů na projektu jednotlivým řešitelům,
--- zvolené komunikační kanály pro komunikaci v týmu a stanovená pravidla pro komunikaci (jsou-li nějaká),
--- zvolený systém pro správu verzí a hosting + informaci, jak do repozitáře mohou nahlédnout vyučující/cvičící (viz níže).
 
-Alternativně lze odevzdat archiv xlogin01_xlogin02_xlogin03_xlogin04_plan.zip, který bude obsahovat libovolný počet souborů xlogin01_xlogin02_xlogin03_xlogin04_plan* ("*" zastupuje libovolný počet libovolných znaků, tedy např. ".mpp" či "01.jpg"), přičemž plán zde může být vytvořený v MS Projectu či jiném programu (není-li daný program ve škole dostupný, je nutno odevzdat i exportovanou verzi v PDF či jpg).
+Programovací jazyk: Python
+GUI: tkinter
+Komunikační kanály: Discord + email + telefon
+odpovidat do 48h(deadline 6h)(případně omluvit dopředu)
+Repozitář: GitHub https://github.com/tiquis0290/ivs_projekt_2
+
+Způsob komentování: Doxygen
+Jazyk komentářů: Angličtina
+
+termíny:
+13. 3. 2024
+- github repozitář (všichni)
+
+20. 3. 2024
+- testy matematicka knihovna (xjanecv00)
+
+27. 3. 2024
+- matematicka knihovna (xhyzari00)
+- navrh gui (xsloboa00)
+
+3. 4. 2024
+- gui (xsloboa00)
+- smerodatna odchylka (xmaslom00)
+
+10. 4. 2024
+- propojeni gui a matematicke knihovny (xmaslom00)
+- napoveda (xsloboa00)
+
+17. 4. 2024
+- instaler/uninstaler (xmaslom00)
+- makefile (xjanecv00)
+- user documentation (xhyzari00)
+- program dokumentation (xjanecv00)
+
+24. 4. 2024
+- mockups (xsloboa00)
+- test instalace na referencni virtualku (xmaslom00)
+- vyhodnoceni rozdilu reality a planu (všichni)
+
+xmaslom00:
+- smerodatna odchylka
+- propojeni gui a mtematicke knihovny
+- instaler/uninstaler
+- test instalace na referencni virtualku
+
+xsloboa00
+- navrh gui
+- gui
+- napoveda
+- mockups
+
+xhyzari00
+- matematicka knihovna
+- user documentation
+
+xjanecv00
+- testy matematicka nihovna
+- makefile
+- program dokumentation
