@@ -37,7 +37,7 @@ termíny:
 - instaler/uninstaler (xmaslom00)
 - makefile (xjanecv00)
 - user documentation (xhyzari00)
-- program dokumentation (xjanecv00)
+- program dokumentation
 
 24. 4. 2024
 - mockups (xsloboa00)
@@ -63,4 +63,3 @@ xhyzari00
 xjanecv00
 - testy matematicka nihovna
 - makefile
-- program dokumentation
