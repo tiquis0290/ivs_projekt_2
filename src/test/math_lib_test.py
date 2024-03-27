@@ -12,8 +12,6 @@ import calc_mathlib as mathlib
        - test_<operation>_error - test right error values (overflow, invalid inputs)
 """
 
-# TODO desetina cilsa
-
 class TestAdd:
     @pytest.mark.parametrize('testv, result', [((0, 0), 0), ((0, 42), 42), ((24, -42), -18)])
     def test_plus_basic(self, testv, result):
@@ -42,7 +40,7 @@ class TestSub:
 
 class TestMul:
 
-    @pytest.mark.parametrize('testv, result', [((0, 0), 0), ((10, 42), 420), ((10.01, 40.02), 404.202), ((10, -42), -420), ((-10, -10), 100)])
+    @pytest.mark.parametrize('testv, result', [((0, 0), 0), ((10, 42), 420), ((10.01, 40.40), 404.404), ((10, -42), -420), ((-10, -10), 100)])
     def test_mul_basic(self, testv, result):
         assert mathlib.mul(testv[0], testv[1]) == result
 
@@ -71,7 +69,7 @@ class TestFac:
 
     @pytest.mark.parametrize('testv, result', [(3, 6), (10, 3628800)])
     def test_fac_basic(self, testv, result):
-        assert mathlib.fac(testv[0]) == result
+        assert mathlib.fac(testv) == result
 
     def test_fac_limit(self):
         assert mathlib.fac(0) == 1
@@ -82,7 +80,7 @@ class TestFac:
         with pytest.raises(ValueError):
             mathlib.fac(4.2)
         with pytest.raises(OverflowError):
-            mathlib.fac(sys.float_info.max/2)
+            mathlib.fac(mathlib.pow(2,8))
 
 class TestPow:
 
@@ -90,16 +88,14 @@ class TestPow:
     def test_pow_basic(self, testv, result):
         assert mathlib.pow(testv[0],testv[1]) == result
 
-    # tohle nevim jestli vubec pujde porovnat
     def test_pow_limit(self):
-        assert mathlib.pow(2, 1023) == sys.float_info.max/2
         assert mathlib.pow(0, 0) == 1
 
     def test_pow_error(self):
         with pytest.raises(ZeroDivisionError):
             mathlib.pow(0, -1)
         with pytest.raises(ValueError):
-            mathlib.root(4, 0.5)
+            mathlib.pow(4, 0.5) #B muze byt jen z N
         with pytest.raises(OverflowError):
             mathlib.pow(sys.float_info.max/2, 2)
 class TestRoot:
@@ -112,7 +108,7 @@ class TestRoot:
         assert mathlib.root(2, 1/1023) == mathlib.pow(2, 1023)
 
     def test_root_error(self):
-        with pytest.raises(ZeroDivisionError):
+        with pytest.raises(ValueError):
             mathlib.root(42, 0)
         with pytest.raises(ValueError):
             mathlib.root(-1, 2)
