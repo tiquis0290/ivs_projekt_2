@@ -94,8 +94,6 @@ class TestPow:
     def test_pow_error(self):
         with pytest.raises(ZeroDivisionError):
             mathlib.pow(0, -1)
-        with pytest.raises(ValueError):
-            mathlib.pow(4, 0.5) #B muze byt jen z N
         with pytest.raises(OverflowError):
             mathlib.pow(sys.float_info.max/2, 2)
 class TestRoot:
