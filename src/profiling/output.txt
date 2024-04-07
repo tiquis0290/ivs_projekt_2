@@ -1,0 +1,72 @@
+         80 function calls in 0.000 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+       30    0.000    0.000    0.000    0.000 calc_mathlib.py:15(add)
+        2    0.000    0.000    0.000    0.000 calc_mathlib.py:22(sub)
+        1    0.000    0.000    0.000    0.000 calc_mathlib.py:29(mul)
+        2    0.000    0.000    0.000    0.000 calc_mathlib.py:36(div)
+       11    0.000    0.000    0.000    0.000 calc_mathlib.py:61(pow)
+        1    0.000    0.000    0.000    0.000 calc_mathlib.py:68(root)
+        2    0.000    0.000    0.000    0.000 codecs.py:319(decode)
+        2    0.000    0.000    0.000    0.000 codecs.py:331(getstate)
+        1    0.000    0.000    0.000    0.000 stddev.py:11(calculate)
+        1    0.000    0.000    0.000    0.000 stddev.py:5(s)
+        1    0.000    0.000    0.000    0.000 stddev.py:8(px)
+        2    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
+       11    0.000    0.000    0.000    0.000 {built-in method builtins.input}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+       10    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+
+
+         6020 function calls in 0.006 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.006    0.006 <string>:1(<module>)
+     3000    0.002    0.000    0.002    0.000 calc_mathlib.py:15(add)
+        2    0.000    0.000    0.000    0.000 calc_mathlib.py:22(sub)
+        1    0.000    0.000    0.000    0.000 calc_mathlib.py:29(mul)
+        2    0.000    0.000    0.000    0.000 calc_mathlib.py:36(div)
+     1001    0.001    0.000    0.001    0.000 calc_mathlib.py:61(pow)
+        1    0.000    0.000    0.000    0.000 calc_mathlib.py:68(root)
+        2    0.000    0.000    0.000    0.000 codecs.py:319(decode)
+        2    0.000    0.000    0.000    0.000 codecs.py:331(getstate)
+        1    0.002    0.002    0.006    0.006 stddev.py:11(calculate)
+        1    0.000    0.000    0.000    0.000 stddev.py:5(s)
+        1    0.000    0.000    0.000    0.000 stddev.py:8(px)
+        2    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+        1    0.000    0.000    0.006    0.006 {built-in method builtins.exec}
+     1001    0.001    0.000    0.001    0.000 {built-in method builtins.input}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+     1000    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+
+
+         6002540 function calls in 5.388 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    5.388    5.388 <string>:1(<module>)
+  3000000    1.525    0.000    1.525    0.000 calc_mathlib.py:15(add)
+        2    0.000    0.000    0.000    0.000 calc_mathlib.py:22(sub)
+        1    0.000    0.000    0.000    0.000 calc_mathlib.py:29(mul)
+        2    0.000    0.000    0.000    0.000 calc_mathlib.py:36(div)
+  1000001    0.814    0.000    0.814    0.000 calc_mathlib.py:61(pow)
+        1    0.000    0.000    0.000    0.000 calc_mathlib.py:68(root)
+      842    0.003    0.000    0.006    0.000 codecs.py:319(decode)
+      842    0.001    0.000    0.001    0.000 codecs.py:331(getstate)
+        1    1.753    1.753    5.388    5.388 stddev.py:11(calculate)
+        1    0.000    0.000    0.000    0.000 stddev.py:5(s)
+        1    0.000    0.000    0.000    0.000 stddev.py:8(px)
+      842    0.002    0.000    0.002    0.000 {built-in method _codecs.utf_8_decode}
+        1    0.000    0.000    5.388    5.388 {built-in method builtins.exec}
+  1000001    1.141    0.000    1.147    0.000 {built-in method builtins.input}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+  1000000    0.150    0.000    0.150    0.000 {method 'split' of 'str' objects}
+
+
