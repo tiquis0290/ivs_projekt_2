@@ -59,6 +59,7 @@ def ce():
     global y
     global operation
     y = y[:-1]
+    setText()
 
 def c():
     global x
@@ -114,6 +115,8 @@ def solve():
         print(result)
         x = ""
         operation = ""
+        if int(result) == result:
+            result = int(result)
         y = str(result)
         setText()
     except:
