@@ -5,14 +5,14 @@ import pytest
 sys.path.append('./libs')
 import calc_mathlib as mathlib
 
-"""@package math_lib
-       Tests for float operators
-       - test_<operation>_basic - basic tests
-       - test_<operation>_limit - limit situation of float
-       - test_<operation>_error - test right error values (overflow, invalid inputs)
-"""
+##@package math_lib_test
+#    Tests for calc_mathlib
+#       - test_<operation>_basic - basic tests
+#       - test_\<operation\>_limit - limit situations (often with float maximum)
+#       - test_\<operation\>_error - test right error values (overflow, invalid inputs)
 
 class TestAdd:
+
     @pytest.mark.parametrize('testv, result', [((0, 0), 0), ((0, 42), 42), ((24, -42), -18)])
     def test_plus_basic(self, testv, result):
         assert mathlib.add(testv[0], testv[1]) == result

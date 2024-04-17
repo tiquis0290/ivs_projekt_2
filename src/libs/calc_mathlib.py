@@ -1,4 +1,4 @@
-import sys 
+import sys
 
 """!
 @package calc_mathlib
@@ -12,6 +12,10 @@ import sys
     #TODO Factorial input and result
 """
 
+
+##  @return a + b
+#   @exception OverflowError
+
 def add(a, b):
     result = a + b
     if result > sys.float_info.max or result < -sys.float_info.max:
@@ -19,6 +23,8 @@ def add(a, b):
     return result
 
 
+##  @return a - b
+# @exception OverflowError
 def sub(a, b):
     result = a - b
     if result > sys.float_info.max or result < -sys.float_info.max:
@@ -26,6 +32,8 @@ def sub(a, b):
     return result
 
 
+##@return a * b
+# @exception OverflowError
 def mul(a, b):
     result = a * b
     if result > sys.float_info.max or result < -sys.float_info.max:
@@ -33,6 +41,9 @@ def mul(a, b):
     return result
 
 
+## @return a/b
+# @exception ZeroDivisionError a/0
+# @exception OverflowError
 def div(a, b):
     if b == 0:
         raise ZeroDivisionError("Division by zero is not possible")
@@ -42,6 +53,9 @@ def div(a, b):
     return result
 
 
+## @return n!
+# @exception ValueError n not in Z
+# @exception OverflowError
 def fac(n):
     if n < 0 or not isinstance(n, int):
         raise ValueError("Factorial is defined only for non-negative integers")
@@ -59,6 +73,11 @@ def fac(n):
 
 
 def pow(a, b):
+    """!
+        @return a ^ b
+        @exception ValueError b not in N
+        @exception OverflowError
+    """
     result = a ** b
     if result > sys.float_info.max or result < -sys.float_info.max:
         raise OverflowError("Result is out of range for float")
@@ -66,6 +85,12 @@ def pow(a, b):
 
 
 def root(a, b):
+    """!
+        @return a ^ (1/b)
+        @exception ZeroDivisionError a ^ (1/0)
+        @exception ValueError  a < 0 and b
+        @exception OverflowError
+    """
     if b % 2 == 0 and a < 0:
         raise ValueError("Value of root has to be greater than 0")
     if b == 0:
@@ -77,6 +102,9 @@ def root(a, b):
 
 
 def abs(a):
+    """!
+        @return |a|
+    """
     if a < 0:
         result = a * -1
     else: 

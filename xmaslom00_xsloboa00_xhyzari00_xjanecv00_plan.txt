@@ -61,6 +61,6 @@ xhyzari00
 - user documentation
 
 xjanecv00
-- testy matematicka nihovna
-- makefile
+- testy matematicka knihovna
+- Makefile
 - Doxyfile, kontrola program documentation
