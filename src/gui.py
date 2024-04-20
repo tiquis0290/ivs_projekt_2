@@ -16,6 +16,7 @@ root.title("Calculator")
 
 x = ""
 operation = ""
+next_operation = ""
 y = ""
 
 
@@ -43,9 +44,14 @@ def twoOperation(char):
     global x
     global y
     global operation
+    global next_operation
     if operation != "":
-        operation = char
-        solve()
+        if y == "":
+            operation = char
+            setText()
+        else:
+            next_operation = char
+            solve()
     else:
         x = float(y)
         if int(x) == x:
@@ -74,6 +80,7 @@ def oneOperation(char):
     global x 
     global y
     global operation
+    solve()
     x = float(y)
     if int(x) == x:
         x = int(x)
@@ -85,9 +92,9 @@ def solve():
     global x
     global y
     global operation
+    global next_operation
     y = float(y)
-    if int(y) == y:
-        y = int(y)
+    x = float(x)
     print(x, operation, y)
     try:
         if operation == "+":
@@ -105,6 +112,8 @@ def solve():
         elif operation == "|":
             result = math.abs(x)
         elif operation == "!":
+            if int(x) == x:
+                x = int(x)
             if isinstance(x, int):
                 result = math.fac(x)
             else:
@@ -113,11 +122,12 @@ def solve():
         else:
             result = y
         print(result)
-        x = ""
-        operation = ""
+        y = ""
         if int(result) == result:
             result = int(result)
-        y = str(result)
+        x = str(result)
+        operation = next_operation
+        next_operation = ""
         setText()
     except:
         c()
@@ -219,5 +229,6 @@ root.bind('<KeyPress-asterisk>', lambda event: twoOperation('*'))
 root.bind('<KeyPress-slash>', lambda event: twoOperation('/'))
 root.bind('<KeyPress-Return>', lambda event: solve())
 root.bind('<KeyPress-period>', lambda event: addchar('.'))
+root.bind('<KeyPress-comma>', lambda event: addchar('.'))
 
 root.mainloop()
