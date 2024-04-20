@@ -13,8 +13,8 @@ import sys
 """
 
 
-##  @return a + b
-#   @exception OverflowError
+## @return a + b
+#  @exception OverflowError
 
 def add(a, b):
     result = a + b
@@ -71,26 +71,20 @@ def fac(n):
 
     return factorial
 
-
+##  @return a ^ b
+# @exception ValueError b not in N
+# @exception OverflowError
 def pow(a, b):
-    """!
-        @return a ^ b
-        @exception ValueError b not in N
-        @exception OverflowError
-    """
     result = a ** b
     if result > sys.float_info.max or result < -sys.float_info.max:
         raise OverflowError("Result is out of range for float")
     return result
 
-
+## @return a ^ (1/b)
+# @exception ZeroDivisionError a ^ (1/0)
+# @exception ValueError  a < 0 and b
+# @exception OverflowError
 def root(a, b):
-    """!
-        @return a ^ (1/b)
-        @exception ZeroDivisionError a ^ (1/0)
-        @exception ValueError  a < 0 and b
-        @exception OverflowError
-    """
     if b % 2 == 0 and a < 0:
         raise ValueError("Value of root has to be greater than 0")
     if b == 0:
@@ -100,11 +94,9 @@ def root(a, b):
         raise OverflowError("Result is out of range for float")
     return result
 
-
+## @return |a|
+# @exception OverflowError
 def abs(a):
-    """!
-        @return |a|
-    """
     if a < 0:
         result = a * -1
     else: 

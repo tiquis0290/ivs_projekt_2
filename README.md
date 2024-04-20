@@ -15,5 +15,4 @@ Nazev tymu
 
 Licence
 -------
-
-Tento program je poskytovan...
+Tento program je poskytovan pod licencí GPU GPL v3
