@@ -127,12 +127,6 @@ def solve():
 
 setText()
 
-
-        
-
-# button = tk.Button(root, text="Information", font=("Arial", 10), padx=20, pady=10, command=info)
-# button.grid(row=0, column=0, columnspan=4, padx=5, pady=5, sticky="nsew")
-
 label = tk.Label(root, textvariable= text, font=("Arial", 30), height=2, bg="lightgray", anchor="w")
 label.grid(row=1, column=0, columnspan=4, padx=10, pady=10, sticky="nesw")
 
