@@ -4,7 +4,7 @@ import libs.calc_mathlib as math
 def info():
     root2 = tk.Tk()
     root2.title("Info")
-    label = tk.Label(root2, text="to be worked on")
+    label = tk.Label(root2, text="Vitajte v kalkulačke!\nTáto kalkulačka je navrhnutá na základe Pythonu a používa knižnicu tkinter na tvorbu grafického rozhrania. Podporuje nasledujúce operácie:\n\nSčítanie: Zadajte dva čísla a stlačte tlačidlo '+' alebo klávesovú skratku '+'.\nOdčítanie: Zadajte dva čísla a stlačte tlačidlo '-' alebo klávesovú skratku '-'.\nNásobenie: Zadajte dva čísla a stlačte tlačidlo '*' alebo klávesovú skratku '*'.\nDelenie: Zadajte dva čísla a stlačte tlačidlo '/' alebo klávesovú skratku '/'.\nMocnenie: Zadajte základ a exponent a stlačte tlačidlo '^'.\nOdmocnina: Zadajte základ a exponent a stlačte tlačidlo 'y√x'.\nAbsolútna hodnota: Zadajte číslo a stlačte tlačidlo '|x|'.\nFaktoriál: Zadajte číslo a stlačte tlačidlo '!'.\n\nPoužite tieto tlačidlá alebo klávesové skratky na vykonávanie operácií a výpočtov.\n\nĎakujeme, že používate našu kalkulačku!", justify="left")
     label.grid(row=0, column=0)
     root2.mainloop()
     
@@ -155,7 +155,7 @@ button.grid(row=2, column=3, padx=5, pady=5, sticky="nsew")
 button = tk.Button(root, text="info", font=("Arial", 18), padx=20, pady=10, command=lambda: info())
 button.grid(row=3, column=0, padx=5, pady=5, sticky="nsew")
 
-button = tk.Button(root, text="!", font=("Arial", 18), padx=20, pady=10, command=lambda: oneOperation('!'))
+button = tk.Button(root, text="!", font=("Arial", 18), padx=20, pady=10, command=lambda: oneOperation('/'))
 button.grid(row=3, column=1, padx=5, pady=5, sticky="nsew")
 
 button = tk.Button(root, text="/", font=("Arial", 18), padx=20, pady=10, command=lambda: twoOperation('/'))
