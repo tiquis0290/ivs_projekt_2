@@ -46,12 +46,13 @@ pack: doc
 	mkdir ../pro_odevzdani/install
 	cp ./dist/stddev.exe ../pro_odevzdani/install
 	cp ./Output/calculator_setup.exe ../pro_odevzdani/install
-	zip ../xlogin01_xlogin02_xlogin03_xlogin04.zip ../pro_odevzdani
+	zip -r ../xlogin01_xlogin02_xlogin03_xlogin04.zip ../pro_odevzdani
+	rm -rf ../pro_odevzdani
 
 passlist_test:
 	python -m doctest -v passlist.py
 
-save_requirements: #without SUDO !!!! or global python wwill be used
+save_requirements: #without SUDO !!!! or global python will be used
 	( \
 	source ../venv/bin/activate;\
 	#pip3 install --upgrade pip;\
