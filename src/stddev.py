@@ -2,12 +2,9 @@ from libs.calc_mathlib import *
 
 
 
-def s(n, sumx2, x_):
-    return root(mul(div(1,sub(n,1)),sub(sumx2,pow(x_, 2))),2)
 
-def px(n, sumx):
-    return div(sumx, n)
-
+## @return number
+# @brief load numbers from stdin and calculate standard deviation
 def calculate():
     n = 0
     sumx = 0
@@ -23,8 +20,6 @@ def calculate():
                 sumx2 = add(sumx2, pow(number,2))
     except:
         pass
-    x_ = px(n, sumx)
+    x_ = div(sumx, n)
+    s = root(mul(div(1,sub(n,1)),sub(sumx2,pow(x_, 2))),2)
     return s(n, sumx2, x_)
-
-print(calculate())
-input()
