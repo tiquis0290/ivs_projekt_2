@@ -33,26 +33,36 @@ def setText():
 
 def fnegate():
     global y
-    y = math.mul(float(y),-1)
-    if int(y) == y:
-        y = int(y)
+    global x
+    if y == "":
+        x = math.mul(float(x),-1)
+        if int(x) == x:
+            x = int(x)
+    else:
+        y = math.mul(float(y),-1)
+        if int(y) == y:
+            y = int(y)
     setText()
 
 def addchar(char):
     global x
     global y
     global operation
-    if char != "." or "." not in y:
-        y = str(y)
-        y += char
-        setText()
+    if operation == "":
+        if char != "." or "." not in x:
+            x = str(x)
+            x += char
+    else:
+        if char != "." or "." not in y:
+            y = str(y)
+            y += char
+    setText()
 
 def twoOperation(char):
     global x
     global y
     global operation
     global next_operation
-    global negate
     if operation != "":
         if y == "":
             operation = char
@@ -150,10 +160,10 @@ def solve():
         else:
             result = y
         print(result)
-        x = ""
+        y = ""
         if int(result) == result:
             result = int(result)
-        y = str(result)
+        x = str(result)
         operation = next_operation
         next_operation = ""
         setText()
