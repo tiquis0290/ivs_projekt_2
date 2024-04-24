@@ -140,7 +140,6 @@ def solve():
         x = 0
     if operation == "":
         operation = "+"
-    print(x, operation, y)
     try:
         if operation == "+":
             result = math.add(x, y)
@@ -170,7 +169,6 @@ def solve():
                 text.set("Error: number must be whole and positive")
         else:
             result = y
-        print(result)
         y = ""
         if int(result) == result:
             result = int(result)

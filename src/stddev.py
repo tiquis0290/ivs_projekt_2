@@ -7,12 +7,9 @@ from libs.calc_mathlib import *
 #        \/ N -1
 #
 
-def s(n, sumx2, x_):
-    return root(mul(div(1,sub(n,1)),sub(sumx2,pow(x_, 2))),2)
 
-def px(n, sumx):
-    return div(sumx, n)
-
+## @return number
+# @brief load numbers from stdin and calculate standard deviation
 def calculate():
     n = 0
     sumx = 0
@@ -26,7 +23,8 @@ def calculate():
                 n = add(n, 1)
                 sumx = add(sumx, number)
                 sumx2 = add(sumx2, pow(number,2))
-    except EOFError:
+    except:
         pass
-    x_ = px(n, sumx)
-    return s(n, sumx2, x_)
+    x_ = div(sumx, n)
+    s = root(mul(div(1,sub(n,1)),sub(sumx2,mul(n,pow(x_, 2)))),2)
+    return s
