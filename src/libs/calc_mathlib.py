@@ -89,7 +89,10 @@ def root(a, b):
         raise ValueError("Value of root has to be greater than 0")
     if b == 0:
         raise ValueError("B value of root can't be zero")
-    result = a ** (1 / b)
+    if a < 0 and b % 2 != 0:
+        result = -((-a) ** (1 / b))
+    else:
+        result = (a ** (1 / b))
     if result > sys.float_info.max or result < -sys.float_info.max:
         raise OverflowError("Result is out of range for float")
     return result
