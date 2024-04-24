@@ -49,11 +49,11 @@ def addchar(char):
     global y
     global operation
     if operation == "":
-        if char != "." or "." not in x:
+        if char != "." or "." not in str(x):
             x = str(x)
             x += char
     else:
-        if char != "." or "." not in y:
+        if char != "." or "." not in str(y):
             y = str(y)
             y += char
     setText()
@@ -86,7 +86,7 @@ def ce():
     global y
     global operation
     if y != "":
-        y = y[:-1]
+        y = str(y)[:-1]
         setText()
     else:
         c()
@@ -129,6 +129,8 @@ def solve():
         x = float(x)
     else:
         x = 0
+    if operation == "":
+        operation = "+"
     print(x, operation, y)
     try:
         if operation == "+":
@@ -169,7 +171,7 @@ def solve():
         setText()
     except:
         c()
-        text.set("Error: syntax error")
+        text.set("Error: number too big")
 
 
 
