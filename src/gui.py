@@ -18,7 +18,6 @@ x = ""
 operation = ""
 next_operation = ""
 y = ""
-negate = ""
 
 
 text = tk.StringVar()
@@ -27,19 +26,16 @@ def setText():
     global x
     global y
     global operation
-    global negate
     if operation == "√":
-        text.set(negate + str(y) + "|" + str(operation) + str(x))
+        text.set(str(y) + "|" + str(operation) + str(x))
     else:
-        text.set(str(x) + str(operation) + negate + str(y) + "|")
+        text.set(str(x) + str(operation) + str(y) + "|")
 
 def fnegate():
-    global negate
-    print(negate)
-    if negate == "":
-        negate = "-"
-    else:
-        negate = ""
+    global y
+    y = math.mul(float(y),-1)
+    if int(y) == y:
+        y = int(y)
     setText()
 
 def addchar(char):
@@ -47,6 +43,7 @@ def addchar(char):
     global y
     global operation
     if char != "." or "." not in y:
+        y = str(y)
         y += char
         setText()
 
@@ -68,9 +65,6 @@ def twoOperation(char):
             x = float(y)
         except:
             x = float(x)
-        if negate == "-":
-            x = math.mul(x,-1)
-            negate = ""
         if int(x) == x:
             x = int(x)
         y = ""
@@ -100,14 +94,12 @@ def oneOperation(char):
     global x 
     global y
     global operation
-    global negate
+    if operation != "" and y != "":
+            solve()
     try:
         x = float(y)
     except:
         x = float(x)
-    if negate == "-":
-        y = math.mul(y,-1)
-        negate = ""
     if int(x) == x:
         x = int(x)
     y = 0
@@ -119,12 +111,14 @@ def solve():
     global y
     global operation
     global next_operation
-    global negate
-    y = float(y)
-    if negate == "-":
-        y = math.mul(y,-1)
-        negate = ""
-    x = float(x)
+    if y != "":
+        y = float(y)
+    else:
+        y = 0
+    if  x != "":
+        x = float(x)
+    else:
+        x = 0
     print(x, operation, y)
     try:
         if operation == "+":
@@ -144,18 +138,22 @@ def solve():
         elif operation == "!":
             if int(x) == x:
                 x = int(x)
-            if isinstance(x, int):
-                result = math.fac(x)
+            if isinstance(x, int) or x < 0:
+                try:
+                    result = math.fac(x)
+                except:
+                    c()
+                    text.set("Error: number too large")
             else:
                 c()
-                text.set("Error: number must be INT")
+                text.set("Error: number must be whole and positive")
         else:
             result = y
         print(result)
-        y = ""
+        x = ""
         if int(result) == result:
             result = int(result)
-        x = str(result)
+        y = str(result)
         operation = next_operation
         next_operation = ""
         setText()
