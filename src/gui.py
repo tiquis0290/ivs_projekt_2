@@ -1,6 +1,7 @@
 import tkinter as tk
 import libs.calc_mathlib as math
 
+## @brief create window with basic info
 def info():
     root2 = tk.Tk()
     root2.title("Info")
@@ -10,7 +11,7 @@ def info():
     
 
 
-
+## @brief Main calculator window
 root = tk.Tk()
 root.title("Calculator")
 
@@ -22,6 +23,7 @@ y = ""
 
 text = tk.StringVar()
 
+## @brief show text in the calculator
 def setText():
     global x
     global y
@@ -31,6 +33,7 @@ def setText():
     else:
         text.set(str(x) + str(operation) + str(y) + "|")
 
+## @brief operation of negation
 def fnegate():
     global y
     global x
@@ -44,6 +47,7 @@ def fnegate():
             y = int(y)
     setText()
 
+## @brief add char into operation
 def addchar(char):
     global x
     global y
@@ -58,6 +62,7 @@ def addchar(char):
             y += char
     setText()
 
+## @brief add operator with 2 operands
 def twoOperation(char):
     global x
     global y
@@ -81,6 +86,7 @@ def twoOperation(char):
         operation = char
         setText()
 
+## @brief delete last char/section
 def ce():
     global x
     global y
@@ -91,6 +97,7 @@ def ce():
     else:
         c()
 
+## @brief reset calculator input
 def c():
     global x
     global y
@@ -100,6 +107,7 @@ def c():
     operation = ""
     setText()
 
+## @brief one operand operations
 def oneOperation(char):
     global x 
     global y
@@ -116,6 +124,7 @@ def oneOperation(char):
     operation = char
     solve()
 
+## @brief solve input of calculator
 def solve():
     global x
     global y

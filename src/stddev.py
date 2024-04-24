@@ -1,6 +1,11 @@
 from libs.calc_mathlib import *
 
-
+#
+#            ________________________
+#           / 1
+#   s =    /----- SUM ( Xi^2 -N*x_^2 )
+#        \/ N -1
+#
 
 def s(n, sumx2, x_):
     return root(mul(div(1,sub(n,1)),sub(sumx2,pow(x_, 2))),2)
