@@ -29,7 +29,7 @@ clean:
 # pack (zabalí projekt tak, aby mohl být odevzdán)
 pack: doc
 	rm -rf ../pro_odevzdani
-	rm -rf ../xlogin01_xlogin02_xlogin03_xlogin04.zip
+	rm -rf ../xmaslom00_xsloboa00_xhyzari00_xjanecv00.zip
 	# doc
 	mkdir ../pro_odevzdani
 	mv ../program_documentation ../pro_odevzdani/doc
