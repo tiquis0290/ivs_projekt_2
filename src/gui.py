@@ -4,7 +4,7 @@ import libs.calc_mathlib as math
 def info():
     root2 = tk.Tk()
     root2.title("Info")
-    label = tk.Label(root2, text="Vitajte v kalkulačke!\nTáto kalkulačka je navrhnutá na základe Pythonu a používa knižnicu tkinter na tvorbu grafického rozhrania. Podporuje nasledujúce operácie:\n\nSčítanie: Zadajte dve čísla a stlačte tlačidlo '+' alebo klávesovú skratku '+'.\nOdčítanie: Zadajte dve čísla a stlačte tlačidlo '-' alebo klávesovú skratku '-'.\nNásobenie: Zadajte dve čísla a stlačte tlačidlo '*' alebo klávesovú skratku '*'.\nDelenie: Zadajte dve čísla a stlačte tlačidlo '/' alebo klávesovú skratku '/'.\nMocnenie: Zadajte základ a exponent a stlačte tlačidlo '^'.\nOdmocnina: Zadajte základ a exponent a stlačte tlačidlo 'y√x'.\nAbsolútna hodnota: Zadajte číslo a stlačte tlačidlo '|x|'.\nFaktoriál: Zadajte číslo a stlačte tlačidlo '!'.\n\nPoužite tieto tlačidlá alebo klávesové skratky na vykonávanie operácií a výpočtov.\n\nĎakujeme, že používate našu kalkulačku!", justify="left")
+    label = tk.Label(root2, text="Vitajte v kalkulačke!\nTáto kalkulačka je navrhnutá na základe Pythonu a používa knižnicu tkinter na tvorbu grafického rozhrania. Podporuje nasledujúce operácie:\n\nSčítanie: Zadajte dve čísla a stlačte tlačidlo '+' alebo klávesovú skratku '+'.\nOdčítanie: Zadajte dve čísla a stlačte tlačidlo '-' alebo klávesovú skratku '-'.\nNásobenie: Zadajte dve čísla a stlačte tlačidlo '*' alebo klávesovú skratku '*'.\nDelenie: Zadajte dve čísla a stlačte tlačidlo '/' alebo klávesovú skratku '/'.\nMocnenie: Zadajte základ, stlačte tlačidlo '^' a zadajte exponent.\nOdmocnina: Zadajte základ, stlačte tlačidlo 'y√x' a zadajte index.\nAbsolútna hodnota: Zadajte číslo a stlačte tlačidlo '|x|'.\nFaktoriál: Zadajte číslo a stlačte tlačidlo '!'.\n\nPoužite tieto tlačidlá alebo klávesové skratky na vykonávanie operácií a výpočtov.\n\nĎakujeme, že používate našu kalkulačku!", justify="left")
     label.grid(row=0, column=0)
     root2.mainloop()
     
@@ -67,8 +67,11 @@ def ce():
     global x
     global y
     global operation
-    y = y[:-1]
-    setText()
+    if y != "":
+        y = y[:-1]
+        setText()
+    else:
+        c()
 
 def c():
     global x
