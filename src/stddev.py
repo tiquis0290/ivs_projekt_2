@@ -21,5 +21,5 @@ def calculate():
     except:
         pass
     x_ = div(sumx, n)
-    s = root(mul(div(1,sub(n,1)),sub(sumx2,pow(x_, 2))),2)
-    return s(n, sumx2, x_)
+    s = root(mul(div(1,sub(n,1)),sub(sumx2,mul(n,pow(x_, 2)))),2)
+    return s

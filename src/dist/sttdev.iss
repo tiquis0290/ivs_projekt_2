@@ -4,7 +4,7 @@
 #define MyAppName "Stddev"
 #define MyAppVersion "1.0"
 #define MyAppPublisher "jazykova bariera"
-#define MyAppExeName "stddev.exe"
+#define MyAppExeName "run_stddev.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
