@@ -80,8 +80,7 @@ def oneOperation(char):
     global x 
     global y
     global operation
-    solve()
-    x = float(y)
+    x = float(x)
     if int(x) == x:
         x = int(x)
     y = 0
@@ -155,7 +154,7 @@ button.grid(row=2, column=3, padx=5, pady=5, sticky="nsew")
 button = tk.Button(root, text="info", font=("Arial", 18), padx=20, pady=10, command=lambda: info())
 button.grid(row=3, column=0, padx=5, pady=5, sticky="nsew")
 
-button = tk.Button(root, text="!", font=("Arial", 18), padx=20, pady=10, command=lambda: oneOperation('/'))
+button = tk.Button(root, text="!", font=("Arial", 18), padx=20, pady=10, command=lambda: oneOperation('!'))
 button.grid(row=3, column=1, padx=5, pady=5, sticky="nsew")
 
 button = tk.Button(root, text="/", font=("Arial", 18), padx=20, pady=10, command=lambda: twoOperation('/'))
