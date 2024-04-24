@@ -145,6 +145,9 @@ def solve():
 
 setText()
 
+button = tk.Button(root, text="info", font=("Arial", 18), padx=0, pady=0, command=lambda: info())
+button.grid(row=0, column=0, columnspan=4, padx=5, pady=5, sticky="nsew")
+
 label = tk.Label(root, textvariable= text, font=("Arial", 30), height=2, bg="lightgray", anchor="w")
 label.grid(row=1, column=0, columnspan=4, padx=10, pady=10, sticky="nesw")
 
@@ -160,7 +163,7 @@ button.grid(row=2, column=2, padx=5, pady=5, sticky="nsew")
 button = tk.Button(root, text="y√x", font=("Arial", 18), padx=20, pady=10, command=lambda: twoOperation('√'))
 button.grid(row=2, column=3, padx=5, pady=5, sticky="nsew")
 
-button = tk.Button(root, text="info", font=("Arial", 18), padx=20, pady=10, command=lambda: info())
+button = tk.Button(root, text="|x|", font=("Arial", 18), padx=20, pady=10, command=lambda: oneOperation('|'))
 button.grid(row=3, column=0, padx=5, pady=5, sticky="nsew")
 
 button = tk.Button(root, text="!", font=("Arial", 18), padx=20, pady=10, command=lambda: oneOperation('!'))
@@ -208,7 +211,7 @@ button.grid(row=6, column=2, padx=5, pady=5, sticky="nsew")
 button = tk.Button(root, text="=", font=("Arial", 18), padx=20, pady=10, command=solve)
 button.grid(row=6, column=3, rowspan=2, padx=5, pady=5, sticky="nsew")
 
-button = tk.Button(root, text="|x|", font=("Arial", 18), padx=20, pady=10, command=lambda: oneOperation('|'))
+button = tk.Button(root, text="+/-", font=("Arial", 18), padx=20, pady=10, command=lambda: oneOperation('|'))
 button.grid(row=7, column=0, padx=5, pady=5, sticky="nsew")
 
 button = tk.Button(root, text="0", font=("Arial", 18), padx=20, pady=10, command=lambda: addchar('0'))
