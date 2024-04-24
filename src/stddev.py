@@ -21,7 +21,10 @@ def calculate():
                 n = add(n, 1)
                 sumx = add(sumx, number)
                 sumx2 = add(sumx2, pow(number,2))
-    except EOFError:
+    except:
         pass
     x_ = px(n, sumx)
     return s(n, sumx2, x_)
+
+print(calculate())
+input()
