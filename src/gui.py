@@ -53,7 +53,10 @@ def twoOperation(char):
             next_operation = char
             solve()
     else:
-        x = float(y)
+        try:
+            x = float(y)
+        except:
+            x = float(x)
         if int(x) == x:
             x = int(x)
         y = ""
@@ -80,7 +83,10 @@ def oneOperation(char):
     global x 
     global y
     global operation
-    x = float(x)
+    try:
+        x = float(y)
+    except:
+        x = float(x)
     if int(x) == x:
         x = int(x)
     y = 0
