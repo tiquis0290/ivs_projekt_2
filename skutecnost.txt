@@ -1,1 +1,4 @@
-tento soubor bude obsahovat rozdil mezi planem projektu a skutecnosti
+Plán projektu bol celkom dobre dodržiavaný. Skoro všetky deadliny až na pár boli včas stihnuté.
+
+Zpätne by bolo asi vhodnješie sa dohodnúť na častejších stretnutiach/updatoch ohľadom toho čo bolo pridané do programu,
+taktiež by bola asi vhodná frekventovanejšia komunikácia. 
