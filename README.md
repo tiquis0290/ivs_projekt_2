@@ -1,17 +1,21 @@
 Prostredi
 ---------
-
-Ubuntu 64bit
 Windows 64bit
+
+Instalace
+---------
+Stáhněte si \
+ivs_projekt_2/src/Output/calculator_setup.exe \
+a pokračujete pomocí dokumentace.pdf
 
 Autori
 ------
+Jazyková bariéra😎
 
-Nazev tymu
-- xlogin01 jmeno prijmeni 
-- xlogin02 jmeno prijmeni 
-- xlogin03 jmeno prijmeni 
-- xlogin04 jmeno prijmeni 
+- xmaslom00 Marek Maslowski
+- xsloboa00 Adam Sloboda
+- xhyzari00 Richard Hyža
+- xjanecv00 Vít Janeček
 
 Licence
 -------
