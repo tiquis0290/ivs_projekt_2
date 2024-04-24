@@ -1,0 +1,4 @@
+xhyzari00 100 (matematická knihovna a user dokumentace)
+xsloboa00 100 (GUI, mockups)
+xjanecv00 100 (testy, makefile, programova dokumentace)
+xmaslom00 100 (profiling, instalátor)
