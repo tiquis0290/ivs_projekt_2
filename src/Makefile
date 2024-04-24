@@ -42,9 +42,10 @@ pack: doc
 	rm -rf ../program_documentation
 	# working dir
 	cp -r ../../ivs_projekt_2 ../../tmp && mv ../../tmp ../pro_odevzdani/repo
-	#TODO installator
-	mkdir ../pro_odevzdani/instal
-
+	# installator
+	mkdir ../pro_odevzdani/install
+	cp ./dist/stddev.exe ../pro_odevzdani/install
+	cp ./Output/calculator_setup.exe ../pro_odevzdani/install
 	zip ../xlogin01_xlogin02_xlogin03_xlogin04.zip ../pro_odevzdani
 
 passlist_test:
