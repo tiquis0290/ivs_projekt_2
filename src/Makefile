@@ -40,7 +40,7 @@ pack: doc
 	mkdir ../pro_odevzdani/install
 	cp ./Output/stddev_setup.exe ../pro_odevzdani/install
 	cp ./Output/calculator_setup.exe ../pro_odevzdani/install
-	zip -r ../xmaslom00_xsloboa00_xhyzari00_xjanecv00.zip ../pro_odevzdani
+	cd ../pro_odevzdani && zip -r ../xmaslom00_xsloboa00_xhyzari00_xjanecv00.zip .
 	rm -rf ../pro_odevzdani
 
 passlist_test:
