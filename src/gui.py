@@ -171,7 +171,7 @@ def solve():
         setText()
     except:
         c()
-        text.set("Error: number too big")
+        text.set("Error: math library failed")
 
 
 
