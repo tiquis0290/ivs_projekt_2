@@ -67,8 +67,11 @@ def ce():
     global x
     global y
     global operation
-    y = y[:-1]
-    setText()
+    if y != "":
+        y = y[:-1]
+        setText()
+    else:
+        c()
 
 def c():
     global x
