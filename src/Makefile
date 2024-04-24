@@ -6,18 +6,12 @@ all: venv
 help:
 # run (spustí program)
 run: gui
-install: venv
+profile: all #stahne závislosti
+venv: # source ../venv/bin/activate;
+	virtualenv ../venv
+	../venv/bin/pip install pytest
+	../venv/bin/pip3 install -r ../requirements.txt
 
-#profile (při zvolení skriptovacího jazyka využijte pro stažení závislostí, případně volte variantu níže
-profile: profiling.py
-	python3 ./profiling.py
-venv:
-	( \
-	  cd ..; \
-	  virtualenv venv; \
-      source ./venv/bin/activate; \
-      pip3 install -r ./requirements.txt; \
-    )
 #doc (spustí generování dokumentace)
 doc:
 	doxygen Doxyfile -w dox.css
@@ -26,7 +20,7 @@ gui:
 testq: ./test/math_lib_test.py
 	pytest -rAq --tb=no ./test/math_lib_test.py
 #test (spustí testy matematické knihovny)
-test:
+test: FORCE
 	pytest -rAq ./test/math_lib_test.py
 clean:
 	rm -r ../venv
@@ -53,9 +47,5 @@ passlist_test:
 	python -m doctest -v passlist.py
 
 save_requirements: #without SUDO !!!! or global python will be used
-	( \
-	source ../venv/bin/activate;\
-	#pip3 install --upgrade pip;\
-	pip3 freeze > ../requirements.txt;\
-	)
+	../venv/bin/pip3 freeze > ../requirements.txt;
 FORCE: ;
