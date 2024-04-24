@@ -27,16 +27,20 @@ def setText():
     global x
     global y
     global operation
+    global negate
     if operation == "√":
         text.set(negate + str(y) + "|" + str(operation) + str(x))
     else:
         text.set(str(x) + str(operation) + negate + str(y) + "|")
 
 def fnegate():
+    global negate
+    print(negate)
     if negate == "":
         negate = "-"
     else:
         negate = ""
+    setText()
 
 def addchar(char):
     global x
@@ -51,6 +55,7 @@ def twoOperation(char):
     global y
     global operation
     global next_operation
+    global negate
     if operation != "":
         if y == "":
             operation = char
@@ -63,6 +68,9 @@ def twoOperation(char):
             x = float(y)
         except:
             x = float(x)
+        if negate == "-":
+            x = math.mul(x,-1)
+            negate = ""
         if int(x) == x:
             x = int(x)
         y = ""
@@ -92,10 +100,14 @@ def oneOperation(char):
     global x 
     global y
     global operation
+    global negate
     try:
         x = float(y)
     except:
         x = float(x)
+    if negate == "-":
+        y = math.mul(y,-1)
+        negate = ""
     if int(x) == x:
         x = int(x)
     y = 0
@@ -107,7 +119,11 @@ def solve():
     global y
     global operation
     global next_operation
+    global negate
     y = float(y)
+    if negate == "-":
+        y = math.mul(y,-1)
+        negate = ""
     x = float(x)
     print(x, operation, y)
     try:
@@ -217,7 +233,7 @@ button.grid(row=6, column=2, padx=5, pady=5, sticky="nsew")
 button = tk.Button(root, text="=", font=("Arial", 18), padx=20, pady=10, command=solve)
 button.grid(row=6, column=3, rowspan=2, padx=5, pady=5, sticky="nsew")
 
-button = tk.Button(root, text="+/-", font=("Arial", 18), padx=20, pady=10, command=lambda: oneOperation('|'))
+button = tk.Button(root, text="+/-", font=("Arial", 18), padx=20, pady=10, command=lambda: fnegate())
 button.grid(row=7, column=0, padx=5, pady=5, sticky="nsew")
 
 button = tk.Button(root, text="0", font=("Arial", 18), padx=20, pady=10, command=lambda: addchar('0'))
