@@ -18,6 +18,7 @@ x = ""
 operation = ""
 next_operation = ""
 y = ""
+negate = ""
 
 
 text = tk.StringVar()
@@ -27,10 +28,15 @@ def setText():
     global y
     global operation
     if operation == "√":
-        text.set(str(y) + "|" + str(operation) + str(x))
+        text.set(negate + str(y) + "|" + str(operation) + str(x))
     else:
-        text.set(str(x) + str(operation) + str(y) + "|")
+        text.set(str(x) + str(operation) + negate + str(y) + "|")
 
+def fnegate():
+    if negate == "":
+        negate = "-"
+    else:
+        negate = ""
 
 def addchar(char):
     global x
