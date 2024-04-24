@@ -38,7 +38,7 @@ pack: doc
 	cp -r ../../ivs_projekt_2 ../../tmp && mv ../../tmp ../pro_odevzdani/repo
 	# installator
 	mkdir ../pro_odevzdani/install
-	cp ./dist/stddev.exe ../pro_odevzdani/install
+	cp ./Output/stddev_setup.exe ../pro_odevzdani/install
 	cp ./Output/calculator_setup.exe ../pro_odevzdani/install
 	zip -r ../xlogin01_xlogin02_xlogin03_xlogin04.zip ../pro_odevzdani
 	rm -rf ../pro_odevzdani

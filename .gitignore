@@ -1,6 +1,7 @@
 ./pro_odevzdani
 ./venv
 /src/build
+/pro_odevzdani
 xlogin01_xlogin02_xlogin03_xlogin04.zip
 # Compiled Object files
 *.slo
