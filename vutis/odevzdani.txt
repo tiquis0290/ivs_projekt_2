@@ -1,0 +1,2 @@
+Komplétny archív sme odovzdali na server ivs.fit.vutbr.cz do adresára /ivs-proj2/odevzdane/xsloboa00 25.4.2024 o 1:50
+a je v ňom naviac vygenerovaná dokumentácia, inštalačné balíky pre Debian a história repozitára.
